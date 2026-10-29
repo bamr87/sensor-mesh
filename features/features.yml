@@ -1,0 +1,78 @@
+# features/features.yml — THE FEATURE INDEX for sensor-mesh (schema features/v1, governance kit v0.1.1).
+# One entry per capability, stable id SMESH-NNN (never reused). status: shipped | partial | planned | deprecated | tbd.
+# `prd:` links each feature to PRD.md requirements. The PRD "Feature catalog" block is generated:
+#   python3 <bamr87/bamr87>/tools/governance_lint.py prd-sync . --write
+schema: features/v1
+repo: bamr87/sensor-mesh
+
+features:
+  - id: SMESH-001
+    title: "Portable C payload encoder producing JSON readings, with a host test"
+    description: "Portable C payload encoder producing JSON readings, with a host test."
+    implemented: true
+    status: shipped
+    prd: [FR1]
+    surface: infra
+    link: platformio.ini
+    tags: [phase-1]
+    date: 2026-10-28
+  - id: SMESH-002
+    title: "PlatformIO project for esp32dev that builds"
+    description: "PlatformIO project for esp32dev that builds."
+    implemented: false
+    status: planned
+    prd: [FR2]
+    surface: infra
+    docs: PRD.md
+    tags: [phase-1]
+    date: 2026-10-28
+  - id: SMESH-003
+    title: "Wi-Fi + MQTT publish loop with reconnect"
+    description: "Wi-Fi + MQTT publish loop with reconnect."
+    implemented: false
+    status: planned
+    prd: [FR3]
+    surface: infra
+    docs: PRD.md
+    tags: [phase-2]
+    date: 2026-10-28
+  - id: SMESH-004
+    title: "BME280 temperature/humidity driver"
+    description: "BME280 temperature/humidity driver."
+    implemented: false
+    status: planned
+    prd: [FR4]
+    surface: infra
+    docs: PRD.md
+    tags: [phase-2]
+    date: 2026-10-28
+  - id: SMESH-005
+    title: "OTA firmware updates"
+    description: "OTA firmware updates."
+    implemented: false
+    status: planned
+    prd: [FR5]
+    surface: infra
+    docs: PRD.md
+    tags: [phase-3]
+    date: 2026-10-28
+  - id: SMESH-006
+    title: "MQTT \u2192 OTLP bridge into fleet-observe"
+    description: "MQTT \u2192 OTLP bridge into fleet-observe."
+    implemented: false
+    status: planned
+    prd: [FR6]
+    surface: infra
+    docs: PRD.md
+    tags: [phase-3]
+    date: 2026-10-28
+  - id: SMESH-007
+    title: "Standard CI gate"
+    description: "Every push and PR runs the fleet's shared standard-ci gate."
+    implemented: true
+    status: shipped
+    prd: [NFR1]
+    surface: infra
+    link: .github/workflows/ci.yml
+    tags: [ci]
+    date: 2026-10-28

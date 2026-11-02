@@ -27,5 +27,5 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: 'gcc -Wall -Wextra -Ilib/payload test/test_payload.c lib/payload/payload.c -o /tmp/test_payload && /tmp/test_payload'

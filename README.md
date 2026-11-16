@@ -1,6 +1,6 @@
 # sensor-mesh
 
-> ESP32 sensor firmware that publishes readings over MQTT, with a host-testable core.
+> Sensor Mesh's direction is to become the ultimate open home for all things open sensor telemetry: data, tools, resources and transparency, with host-testable ESP32 firmware, MQTT JSON and inspectable fleet telemetry for everyone ([constitution](docs/constitution.md) §1).
 
 Cheap sensors, real telemetry: ESP32 nodes read environment sensors and publish JSON over MQTT to a broker the fleet can observe.
 

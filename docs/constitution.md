@@ -6,9 +6,17 @@
 > Agents read this before [AGENTS.md](../AGENTS.md) conventions, the [PRD](../PRD.md), or the
 > [feature catalog](../features/features.yml). Ratified by merged PR; amended only per § 8.
 
-## 1. Mission
+## 1. Missions
 
-Cheap sensors, real telemetry: ESP32 nodes read environment sensors and publish JSON over MQTT to a broker the fleet can observe. It is a learning-first portfolio project in the bamr87 fleet: Feeds sensor metrics into fleet-observe and fleet-mobile; deployable broker on fleet-infra.
+Sensor Mesh's direction is to become the ultimate open home for all things open sensor telemetry — data, tools, resources and transparency, gathered in one place that anyone can inspect and reuse.
+
+1. **Provide data, tools, resources and transparency for all stakeholders, embedded and IoT practitioners, and the general public.** Firmware authors, operators and anyone reading a room's sensors are first-class audiences. The aim is a shared, inspectable commons: the same firmware, the same JSON, and the same broker path for everyone.
+2. **Let inexpensive ESP32 nodes read environment sensors and publish clear JSON over MQTT to a broker anyone can observe, with a host-testable core so firmware can be verified off-device.** Cheap hardware should still produce real, structured telemetry that can be tested without flashing a board first.
+3. **Feed that telemetry into the fleet's observe and mobile surfaces, and keep a deployable broker on fleet-infra, so sensor data stays open, inspectable and reusable.** A reading should travel from the node to the people who need it without disappearing into a proprietary cloud.
+
+These missions set the course; they do not claim the work is finished. They serve the PRD's learning-first path: ESP32 nodes, MQTT JSON, and a host-testable core that can feed fleet-observe, fleet-mobile and a broker on fleet-infra.
+
+_Source: [PRD.md](../PRD.md) §1.1._
 
 ## 2. Invariants (non-negotiable)
 

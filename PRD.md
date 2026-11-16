@@ -11,6 +11,23 @@ Cheap sensors, real telemetry: ESP32 nodes read environment sensors and publish 
 | Version | Date | Notes |
 | --- | --- | --- |
 | 0.1 | 2026-10-28 | Initial requirements and phased roadmap (repo foundation). |
+| 0.2 | 2026-11-16 | Added §1.1 missions (amendment record in docs/amendments/). |
+
+## 1.1 Missions
+
+Sensor Mesh's direction is to become the ultimate open home for all things open sensor telemetry — data, tools, resources and transparency, gathered in one place that anyone can inspect and reuse.
+
+1. **Provide data, tools, resources and transparency for all stakeholders, embedded and IoT practitioners, and the general public.** Firmware authors, operators and anyone reading a room's sensors are first-class audiences. The aim is a shared, inspectable commons: the same firmware, the same JSON, and the same broker path for everyone.
+2. **Let inexpensive ESP32 nodes read environment sensors and publish clear JSON over MQTT to a broker anyone can observe, with a host-testable core so firmware can be verified off-device.** Cheap hardware should still produce real, structured telemetry that can be tested without flashing a board first.
+3. **Feed that telemetry into the fleet's observe and mobile surfaces, and keep a deployable broker on fleet-infra, so sensor data stays open, inspectable and reusable.** A reading should travel from the node to the people who need it without disappearing into a proprietary cloud.
+
+These missions set the course; they do not claim the work is finished. They serve the PRD's learning-first path: ESP32 nodes, MQTT JSON, and a host-testable core that can feed fleet-observe, fleet-mobile and a broker on fleet-infra.
+
+**Requirement**
+
+- MR1: Constitution §1 states one direction statement and exactly three numbered missions, and the README and AGENTS.md taglines match that direction and link to constitution §1.
+
+Feature [SMESH-008](features/features.yml) traces to requirement MR1.
 
 ## 2. Goals
 
@@ -65,6 +82,7 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 | [SMESH-005](features/features.yml) | OTA firmware updates | planned | [`PRD.md`](PRD.md) | FR5 |
 | [SMESH-006](features/features.yml) | MQTT → OTLP bridge into fleet-observe | planned | [`PRD.md`](PRD.md) | FR6 |
 | [SMESH-007](features/features.yml) | Standard CI gate | shipped | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) | NFR1 |
+| [SMESH-008](features/features.yml) | Constitution missions | planned | [`docs/constitution.md`](docs/constitution.md) · [`PRD.md`](PRD.md) | MR1 |
 
 **Requirement → feature trace**
 
@@ -77,4 +95,5 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 | FR5 | SMESH-005 |
 | FR6 | SMESH-006 |
 | NFR1 | SMESH-007 |
+| MR1 | SMESH-008 |
 <!-- features:end -->
